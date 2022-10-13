@@ -87,6 +87,7 @@ async function getDeployments(
 
 test.beforeEach((t) => {
   process.env.GITHUB_REPOSITORY = `${
+    // set owner to enable test on forked repositories
     process.env.OWNER || 'strumwolf'
   }/delete-deployment-environment`;
   process.env.GITHUB_REF = 'main';
